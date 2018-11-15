@@ -1,0 +1,99 @@
+.certificate {
+    margin-bottom: 30px;
+    display: table;
+    width: 100%;
+    > * {
+        display: table-cell;
+        @include mq('tablet') {
+            display: block;
+            width: 100%;
+        }
+    }
+    .certificate__img{
+        width: 245px;
+        position: relative;
+        .certificate__img__hover {
+            opacity: 0;
+            vertical-align: middle;
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            top: 50%;
+            margin-top: -11px;
+            z-index: 2;
+            color: $color-1;
+            font-weight: 700;
+        }
+        img {
+            opacity: 1;
+        }
+        @include mq('desktop-sm') {
+            width: 215px;
+            img {
+                max-width: 215px;
+            }
+        }
+        @include mq('tablet') {
+            width: 100%;    
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    }
+    .certificate__detail{
+        text-align: left;
+        padding-left: 28px;
+        @include mq('tablet') {
+            padding-left: 0;
+            text-align: center;
+        }
+        .certificate__detail__content {
+            vertical-align: middle;
+            display: inline-block;
+            p {
+                @extend .color-5;
+                margin-bottom: 10px;
+            }
+            button {
+                margin-bottom: 10px;
+                text-decoration: underline;
+                padding: 0;
+                background: none;
+                line-height: 24px; 
+                > * {
+                    display: inline-block;
+                }
+                i {
+                    margin-right: 15px;
+                    vertical-align: middle;
+                }
+                span {
+                    vertical-align: middle;
+                }
+            }
+            
+        }
+    }
+    @include on-event {
+        .certificate__img {
+            img{
+                opacity: 0.5;
+            }
+            .certificate__img__hover {
+                opacity: 1;
+            }
+        }
+        .certificate__detail {
+            .certificate__detail__content {
+                p.h4 {
+                    color: $color-1;
+                }
+                button {
+                    span {
+                        color: $color-3;
+                        box-shadow: none;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,559 @@
+   <!doctype html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Capacitarte UBA - Plataforma de Capacitación Online</title>
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="/bower_components/animate.css/animate.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+    
+    <!-- build:js scripts/vendor/modernizr.js -->
+    <script src="/bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+  </head>
+  <body id="body">
+    <!--[if IE]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+         
+   <nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle navCollapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"><p>Curso de <b>Liquidación de sueldos</b></p></a>
+      <ul class="navbar-curse color-12 list-inline hidden-xs pull-right">
+        <li><a class="active" href="course-dashboard.html"><i class="icn icn-5"></i><span>PANEL</span></a></li>
+        <li><a class="" href="course-map.html"><i class="icn icn-6"></i><span>MAPA</span></a></li>
+        <li><a class="" href="foro.html"><i class="icn icn-7"></i><span>FOROS</span></a></li>
+      </ul>
+    </div>
+
+  </div><!-- /.container-fluid -->
+</nav>
+<nav class="main-nav">
+      <div class="nav navbar-nav">
+        <div class="nanavbar-user">
+          <div class="navbar-user__img"><img src="img/user-default.png" alt="User Img" class="img-responsive"></div>
+          <div class="navbar-user__data">
+            <p class="h4">Daiana Arriola Gonsalez</p>
+            <a href="user-data.html" class="btn btn-sm btn-link">Editar Perfil</a>
+          </div>
+          <button type="button" class="navCollapse">
+            <span class="icn icn-2"></span>
+          </button>                  
+        </div>
+        <ul class="navbar-principal list-unstyled">
+            <li><a href="courses-all.html">Mis cursos</a></li>
+            <li><a href="javascript:;">Mis consultas</a></li>
+            <li><a href="javascript:;">Mis Certificados</a></li>
+            <li><a href="javascript:;">Más cursos disponibles</a></li>
+            <li><a href="javascript:;"><span class="icn icn-1"></span> Salir</a></li>
+        </ul>
+      </div>
+      <a href="javascript:;" class="ayuda"><span>?</span>Ayuda</a>
+</nav>
+<div class="nav-overlay navCollapse"></div>
+<div class="visible-xs">
+  <div class="container">
+    <div class="row">
+        <ul class="navbar-curse list-inline color-1 text-justify col-xs-12">
+          <li class="col-xs-4 text-center"><a class="active" href="course-dashboard.html"><i class="icn icn-8"></i><br><span>PANEL</span></a></li>
+          <li class="col-xs-4 text-center"><a class="" href="course-map.html"><i class="icn icn-9"></i><br><span>MAPA</span></a></li>
+          <li class="col-xs-4 text-center"><a class="" href="foro.html"><i class="icn icn-10"></i><br><span>FOROS</span></a></li>
+        </ul>
+    </div>  
+  </div>
+</div>
+     
+
+      <section id="courses-dashboard">
+        <div class="container-fluid">
+          <div class="courses__dashboard row">
+                        <div class="preloader-container animated fadeIn">
+              <div class="preloader c100 p90 big center animated spin infinite">
+                  <div class="slice"><div class="bar"></div><div class="fill"></div></div>
+              </div>
+          </div>  
+  		        <div class="col-xs-12 col-sm-5 pull-left">
+                  <a href="course-map.html" class="block1 dashboard__progress block1__hover">
+                    <div class="block1__head">
+                      <p>Progreso</p>
+                    </div>
+                    <div class="dashboard__progress__circle text-center">
+                        <div class="c100 p25 big"><!-- la clase p indica el porcentaje del total alcanzado -->
+                          <span>25</span>
+                          <div class="slice">
+                            <div class="bar"></div>
+                            <div class="fill"></div>
+                          </div>
+                        </div>                
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="dashboard__progress__data">
+                        <p>Clases</p>
+                        <span class="pull-right">4/10</span>
+                    </div>
+                    <div class="dashboard__progress__data">
+                        <p>Exámenes</p>
+                        <span class="pull-right">1/2</span>
+                    </div>
+                  </a>
+  		        </div> <!-- end progress block1  --> 
+              <div class="col-xs-12 col-sm-7 pull-right">
+                  <div class="block1 dashboard__activity">
+                    <div class="block1__head">
+                      <p>Actividad</p>
+                      <a href="course-map.html" class="pull-right"><span>VER TODAS</span> <span class="hidden-xs">LAS ACTIVIDADES</span></a>
+                      <div class="clearfix"></div>
+                    </div>
+                    <div class="dashboard__activity__last hidden-xs">
+                        <p>Última actividad <span>hace 5 días</span></p>
+                        <span>2.1</span><a href="course-lesson.html">Taller Práctico de temas de liquidación  de sueldos.</a><span><i class="icn icn-11"></i></span>
+
+                    </div>
+                    <div class="dashboard__activity__next">
+                        <p>Clase Actual</p>
+                        <span>2.2</span><p>Ejemplos de cada tema vistos en el curso teórico de sueldos</p>
+                    </div>
+                    <div class="dashboard__activity__continue">
+                      <a href="course-lesson.html" class="btn btn-md btn-primary ">CONTINUAR</a>
+                      <div class="clearfix"></div>
+                    </div>
+                  </div>
+
+              </div> <!-- end activity block1 -->
+              
+              <div class="col-xs-12 col-sm-7 pull-right hidden-xs">
+                  <div class="block1 dashboard__query">
+                      <div class="block1__head">
+                        <p>Tus consultas</p>
+                        <a href="foro.html" class="pull-right">IR AL FORO</a>
+                        <div class="clearfix"></div>
+                      </div>
+                      <button type="button" class="dashboard__query__query collapsed" role="button" data-toggle="collapse" href="#query1" aria-expanded="false">
+                          <div class="dashboard__query__question">
+                              <span>20/08</span><p>¿Puedo liquidar en dólares?</p><span class="text-primary">Pendiente</span>
+                          </div>
+                          <span class="clearfix"></span>
+                          <div class="collapse dashboard__query__response" id="query1">
+                            <div class="col-md-12 comments">
+    <div class="comments__user">
+        <div class="comments__sender hidden-xs">
+            <div class="sender__img">
+              <img src="img/user-default-xs.png" alt="User" class="img-responsive">
+            </div>
+            <div class="sender__data">
+              <p><b>María Velazques</b></p>
+              <p><i>27/02/2017
+              <br>15:30</i></p>
+            </div>
+        </div>
+        <div class="comments__comment">
+          <div class="comments__comment__dialog">
+              <i class="fa fa-caret-left" aria-hidden="true"></i>
+
+              <p>Hola Juan, podés hacerlo siempre y cuando lo especifiques en la hoja de balance. Recordá que especificar la moneda es un requerimiento legal.</p>
+          </div>
+        </div>
+        <div class="comments__sender visible-xs">
+            <div class="sender__img">
+              <img src="img/user-default-xs.png" alt="User" class="img-responsive">
+            </div>
+            <div class="sender__data">
+              <p><b>María Velazques</b></p>
+              <p><i>27/02/2017
+              <br>15:30</i></p>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+
+    </div>
+    <div class="comments__admin">
+        <div class="comments__sender hidden-xs">
+            <div class="sender__img">
+              <img src="img/user-default-xs.png" alt="User" class="img-responsive">
+            </div>
+            <div class="sender__data">
+              <p><b>María Velazques</b></p>
+              <p><i>27/02/2017
+              <br>15:30</i></p>
+            </div>
+        </div>
+        <div class="comments__comment">
+          <div class="comments__comment__dialog">
+              <i class="fa fa-caret-left" aria-hidden="true"></i>
+
+              <p>Hola Juan, podés hacerlo siempre y cuando lo especifiques en la hoja de balance. Recordá que especificar la moneda es un requerimiento legal.</p>
+          </div>
+        </div>
+        <div class="comments__sender visible-xs">
+            <div class="sender__img">
+              <img src="img/user-default-xs.png" alt="User" class="img-responsive">
+            </div>
+            <div class="sender__data">
+              <p><b>María Velazques</b></p>
+              <p><i>27/02/2017
+              <br>15:30</i></p>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+
+    </div>
+    <span class="clearfix"></span>
+    <span class="comments__actions">
+        <!-- <button type="button" href="javascript:;" class="btn btn-xs btn-link">COMENTAR</button> -->
+        <a href="foro-detail.html" class="btn btn-xs btn-link">VER DETALLE</a>
+      
+    </span>
+
+</div>
+
+                            <div class="clearfix"></div>
+                          </div>   
+                          <span class="clearfix"></span>
+
+                      </button> <!-- end query -->
+                      <button type="button" class="dashboard__query__query collapsed" role="button" data-toggle="collapse" href="#query2" aria-expanded="false">
+                          <div class="dashboard__query__question">
+                            <span>22/08</span><p>¿Me conviene abrir la liquidación en distintos ítems o liquidar todo junto?</p><span class="text-success">Respondida</span>
+                          </div>
+                          <span class="clearfix"></span>
+                          <div class="collapse dashboard__query__response" id="query2">
+                              <div class="col-md-12 comments">
+    <div class="comments__user">
+        <div class="comments__sender hidden-xs">
+            <div class="sender__img">
+              <img src="img/user-default-xs.png" alt="User" class="img-responsive">
+            </div>
+            <div class="sender__data">
+              <p><b>María Velazques</b></p>
+              <p><i>27/02/2017
+              <br>15:30</i></p>
+            </div>
+        </div>
+        <div class="comments__comment">
+          <div class="comments__comment__dialog">
+              <i class="fa fa-caret-left" aria-hidden="true"></i>
+
+              <p>Hola Juan, podés hacerlo siempre y cuando lo especifiques en la hoja de balance. Recordá que especificar la moneda es un requerimiento legal.</p>
+          </div>
+        </div>
+        <div class="comments__sender visible-xs">
+            <div class="sender__img">
+              <img src="img/user-default-xs.png" alt="User" class="img-responsive">
+            </div>
+            <div class="sender__data">
+              <p><b>María Velazques</b></p>
+              <p><i>27/02/2017
+              <br>15:30</i></p>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+
+    </div>
+    <div class="comments__admin">
+        <div class="comments__sender hidden-xs">
+            <div class="sender__img">
+              <img src="img/user-default-xs.png" alt="User" class="img-responsive">
+            </div>
+            <div class="sender__data">
+              <p><b>María Velazques</b></p>
+              <p><i>27/02/2017
+              <br>15:30</i></p>
+            </div>
+        </div>
+        <div class="comments__comment">
+          <div class="comments__comment__dialog">
+              <i class="fa fa-caret-left" aria-hidden="true"></i>
+
+              <p>Hola Juan, podés hacerlo siempre y cuando lo especifiques en la hoja de balance. Recordá que especificar la moneda es un requerimiento legal.</p>
+          </div>
+        </div>
+        <div class="comments__sender visible-xs">
+            <div class="sender__img">
+              <img src="img/user-default-xs.png" alt="User" class="img-responsive">
+            </div>
+            <div class="sender__data">
+              <p><b>María Velazques</b></p>
+              <p><i>27/02/2017
+              <br>15:30</i></p>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+
+    </div>
+    <span class="clearfix"></span>
+    <span class="comments__actions">
+        <!-- <button type="button" href="javascript:;" class="btn btn-xs btn-link">COMENTAR</button> -->
+        <a href="foro-detail.html" class="btn btn-xs btn-link">VER DETALLE</a>
+      
+    </span>
+
+</div>
+
+                             
+                            <div class="clearfix"></div>
+                          </div>   
+                          <span class="clearfix"></span>
+
+                      </button> <!-- end query -->
+                      <button type="button" class="dashboard__query__query collapsed" role="button" data-toggle="collapse" href="#query3" aria-expanded="false">
+                          <div class="dashboard__query__question">
+                            <span>23/08</span><p>¿Puedo liquidar en dólares?</p><span class="text-success">Respondida</span>
+                          </div>
+                          <span class="clearfix"></span>
+                          <div class="collapse dashboard__query__response" id="query3">
+                            <div class="col-md-12 comments">
+    <div class="comments__user">
+        <div class="comments__sender hidden-xs">
+            <div class="sender__img">
+              <img src="img/user-default-xs.png" alt="User" class="img-responsive">
+            </div>
+            <div class="sender__data">
+              <p><b>María Velazques</b></p>
+              <p><i>27/02/2017
+              <br>15:30</i></p>
+            </div>
+        </div>
+        <div class="comments__comment">
+          <div class="comments__comment__dialog">
+              <i class="fa fa-caret-left" aria-hidden="true"></i>
+
+              <p>Hola Juan, podés hacerlo siempre y cuando lo especifiques en la hoja de balance. Recordá que especificar la moneda es un requerimiento legal.</p>
+          </div>
+        </div>
+        <div class="comments__sender visible-xs">
+            <div class="sender__img">
+              <img src="img/user-default-xs.png" alt="User" class="img-responsive">
+            </div>
+            <div class="sender__data">
+              <p><b>María Velazques</b></p>
+              <p><i>27/02/2017
+              <br>15:30</i></p>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+
+    </div>
+    <div class="comments__admin">
+        <div class="comments__sender hidden-xs">
+            <div class="sender__img">
+              <img src="img/user-default-xs.png" alt="User" class="img-responsive">
+            </div>
+            <div class="sender__data">
+              <p><b>María Velazques</b></p>
+              <p><i>27/02/2017
+              <br>15:30</i></p>
+            </div>
+        </div>
+        <div class="comments__comment">
+          <div class="comments__comment__dialog">
+              <i class="fa fa-caret-left" aria-hidden="true"></i>
+
+              <p>Hola Juan, podés hacerlo siempre y cuando lo especifiques en la hoja de balance. Recordá que especificar la moneda es un requerimiento legal.</p>
+          </div>
+        </div>
+        <div class="comments__sender visible-xs">
+            <div class="sender__img">
+              <img src="img/user-default-xs.png" alt="User" class="img-responsive">
+            </div>
+            <div class="sender__data">
+              <p><b>María Velazques</b></p>
+              <p><i>27/02/2017
+              <br>15:30</i></p>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+
+    </div>
+    <span class="clearfix"></span>
+    <span class="comments__actions">
+        <!-- <button type="button" href="javascript:;" class="btn btn-xs btn-link">COMENTAR</button> -->
+        <a href="foro-detail.html" class="btn btn-xs btn-link">VER DETALLE</a>
+      
+    </span>
+
+</div>
+
+                            <div class="clearfix"></div>
+                          </div>   
+                          <span class="clearfix"></span>
+
+                      </button> <!-- end query -->
+                  </div>
+              </div> <!-- end activity block1  visible en no mobile-->
+
+              <div class="col-xs-12 col-sm-5 pull-left">
+                  <div class="block1 dashboard_professors">
+                    <div class="block1__head">
+                      <p>Profesores</p>
+                    </div>
+                    <div class="professor">
+                      <div class="professor__img"><img src="img/user-default.png" alt="User Img" class="img-responsive"></div>
+                      <button  type="button" data-toggle="modal" data-target="#profesor1" class="professor__data">
+                        <p class="h4">Daiana Arriola Gonsalez</p>
+                        <p>Contador. Socio del estudio Lagomarsino & Juarez</p>
+                      </button>
+                    </div> <!-- end professor -->
+                    <div class="professor">
+                      <div class="professor__img"><img src="img/user-default.png" alt="User Img" class="img-responsive"></div>
+                      <button  type="button" data-toggle="modal" data-target="#profesor1" class="professor__data">
+                        <p class="h4">Mariana Carlovich</p>
+                        <p>Contadora. Responsable de sector sueldos de innova SRL</p>
+                      </button>
+                    </div> <!-- end professor -->
+                  </div>
+              </div> <!-- end progress block1  --> 
+
+              <div class="modal fade" id="profesor1" tabindex="-1" role="dialog" aria-labelledby="profesor1">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content" method="" action="">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="icn icn-23"></i></button>
+                      <h4 class="modal-title" id="myModalLabel">Profesor Roberto Rodriguez</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row professor__modal">
+                          <div class="col-sm-2 professor__img">
+                            <img src="img/profesor1.png" alt="" class="img-responsive">
+                          </div>
+                          <div class="col-sm-10 scrollbar-outer professor__descrip" style="height: 600px;">
+                              <strong><span style="font-size:16px;"><span style="font-family: tahoma,geneva,sans-serif;">Cdor. Alberto Patiño&nbsp; </span></span></strong></p>
+                              <p style="TEXT-ALIGN: left">
+                                </p>
+                              <p style="TEXT-ALIGN: left">
+                                <br>
+                                <span style="font-size:14px;"><span style="font-family: tahoma,geneva,sans-serif;"><strong><u>FORMACIÓN ACADÉMICA</u></strong></span></span></p>
+                              <p style="TEXT-ALIGN: left">
+                                <span style="font-size:14px;"><span style="font-family: tahoma,geneva,sans-serif;"><strong>Contador Público</strong><br>
+                                Universidad Nacional de Buenos Aires</span></span></p>
+                              <p style="TEXT-ALIGN: left">
+                                <span style="font-size:14px;"><span style="font-family: tahoma,geneva,sans-serif;"><strong>Master en Negocios Internacionales</strong><br>
+                                Universidad de Miami</span></span></p>
+                              <p style="TEXT-ALIGN: left">
+                                <span style="font-size:14px;"><span style="font-family: tahoma,geneva,sans-serif;"><strong>Pos-grado en Finanzas en IESA.<br>
+                                Pos-grado Procesos y Re-ingeniería </strong><br>
+                                Massachussets Institute of Technology (MIT)<br>
+                                &nbsp;</span></span></p>
+                              <p style="TEXT-ALIGN: left">
+                                <span style="font-size:14px;"><span style="font-family: tahoma,geneva,sans-serif;"><strong><u>TRAYECTORIA LABORAL</u></strong></span></span></p>
+                              <p style="TEXT-ALIGN: left">
+                                <span style="font-size:14px;"><span style="font-family: tahoma,geneva,sans-serif;"><strong>TELCORDIA (Brasil)</strong><br>
+                                Empresa dedicada a la creación de SW especializado en Telecomunicaciones, su implementación, estudio de procesos técnicos y asesoramiento en el área de Sistemas de Información especializados.</span></span></p>
+                              <p style="TEXT-ALIGN: left">
+                                <span style="font-size:14px;"><span style="font-family: tahoma,geneva,sans-serif;"><strong>INTESA Alianza Estratégica entre SAIC</strong> (Science Applicacation International Corporation) y Petróleos de Venezuela S.A. (empresa estatal venezolana). Caracas, Venezuela.<br>
+                                Outsourcing de&nbsp; Tecnología de la Información, creación de Software especializado, análisis e implementación de procesos, técnicos y administrativos, administración de la Procura o “Material Management” de Software y Hardware, asesoramiento sobre tendencias globales y regionales sobre el área de Sistemas de Información. Vicepresidente de Finanzas&nbsp; desde Enero 1999 hasta Febrero 2004.</span></span></p>
+                              <p style="TEXT-ALIGN: left">
+                                <span style="font-size:14px;"><span style="font-family: tahoma,geneva,sans-serif;"><strong>DOW CHEMICAL CORPORATION.</strong> (Varias Asignaciones nacionales e internacionales). Posiciones en Argentina, Brasil, Perú, Estados Unidos y Venezuela, desde 1976 hasta 1994.<br>
+                                Supervisor de Contabilidad en Argentina.<br>
+                                • Dowell Schlumberger), Gerente de Contabilidad.<br>
+                                • Dowell Schlumberger, Gte. de Administración y Finanzas&nbsp; Regional para la División del Pacífico. (Perú, Colombia y Ecuador.<br>
+                                • Dowell Schlumberger, asistente principal al Contralor del Área Latinoamericana.<br>
+                                • Dow Chemical, en Venezuela, Contralor.<br>
+                                • Dow Chemical, (Latin América Unit, en Coral Gables, USA), como Analista de Negocios para 2 negocios principales: Agro y Farmacéutico.<br>
+                                • Dow Chemical, Contralor en&nbsp; Venezuela.</span></span></p>
+                              <p style="TEXT-ALIGN: left">
+                                <span style="font-size:14px;"><span style="font-family: tahoma,geneva,sans-serif;"><strong>Xerox Coporation:</strong> Director de Finanzas Venezuela</span></span></p>
+                              <p style="TEXT-ALIGN: left">
+                                <span style="font-size:14px;"><span style="font-family: tahoma,geneva,sans-serif;"><strong>Sade Argentina</strong> (Joint Venture entre GE y Sade Cogepi)<br>
+                                Analista Fiananciero</span></span></p>
+                              <p style="TEXT-ALIGN: left">
+                                <span style="font-size:14px;"><span style="font-family: tahoma,geneva,sans-serif;"><strong>Mercedes Benz Argentina</strong><br>
+                                Analista</span></span></p>
+                              <p style="TEXT-ALIGN: left">
+                                <span style="font-size:14px;"><span style="font-family: tahoma,geneva,sans-serif;">&nbsp;</span></span><br>
+                                <strong style="font-family: tahoma, geneva, sans-serif; font-size: 14px;"><u>EXPERIENCIA DOCENTE</u></strong></p>
+                              <p style="TEXT-ALIGN: left">
+                                <span style="font-size:14px;"><span style="font-family: tahoma,geneva,sans-serif;"><strong>UCES. Carrera de Dirección de Negocios.</strong><br>
+                                Profesor de las materias:<br>
+                                Sistemas de Información Gerencial I y II<br>
+                                Medición de Desempeño</span></span></p>
+                              <p style="TEXT-ALIGN: left">
+                                <span style="font-size:14px;"><span style="font-family: tahoma,geneva,sans-serif;"><strong>UNIVERSIDAD DEL SALVADOR. Carrera de Relaciones Públicas</strong><br>
+                                Profesor de las materias:<br>
+                                Administración de Empresas<br>
+                                Comunicación Social</span></span></p>
+                              <p style="TEXT-ALIGN: left">
+                                <span style="font-size:14px;"><span style="font-family: tahoma,geneva,sans-serif;">&nbsp;</span></span></p>
+                          </div>
+                        </div>
+                    </div>
+     
+
+                  </div>
+                </div>
+              </div>  <!-- fin modal del profesor --> 
+
+  		
+              <div class="col-xs-12 col-sm-7 pull-right visible-xs">
+              </div> <!-- end activity block1  visible en mobile-->
+
+
+        </div>
+      </div>    
+    </section>
+   
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='https://www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create','UA-XXXXX-X');ga('send','pageview');
+    </script>
+
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/modernizr/modernizr.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+    
+    <!-- build:js scripts/plugins.js -->
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/affix.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/alert.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tooltip.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/modal.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/transition.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/button.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/popover.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/carousel.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js"></script>
+    <script src="/bower_components/wow/dist/wow.min.js"></script>
+    <script src="/bower_components/jQScrollbar/jQScrollbar.js"></script>
+    <!-- endbuild -->
+    
+    <!-- build:js scripts/main.js -->
+    <script src="scripts/app.js"></script>
+    <!-- endbuild -->
+  </body>
+</html>
+
+<script>
+  $(document).ready(function(){
+      App.dashboardResponsiveQuerys();
+      App.customScroll();
+    });
+</script>

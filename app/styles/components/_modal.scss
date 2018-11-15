@@ -1,0 +1,144 @@
+.modal{
+    background: rgba(0, 0, 0, 0.7);
+    .modal-dialog {
+        margin-top: 70px;
+        width: 100%;
+        max-width: 1024px;
+        padding: 10px;
+        @include mq('mobile') {
+            margin: 60px 0 0;
+            padding: 0 10px;
+        }
+        .modal-content {
+            padding: 35px 30px;
+            @include mq ('mobile') {
+                padding: 27px 17px;
+            }
+            border-radius: 0;
+            > * {
+                padding: 0 0 20px;
+            }   
+            .radio {
+                margin-left: 70px;
+                margin-bottom: 20px;
+                label{
+                    vertical-align: text-bottom;
+                    @extend .h4;
+                }
+                @include mq('tablet') {
+                    margin-left: 25px;
+                    label{
+                        font-size: 14px;
+                        line-height: 20px;
+                    }
+                }
+            }
+            .checkbox {
+                margin-bottom: 0;
+                label{
+                    @extend .paragraph-1;
+                }
+            }
+            .checkbox,
+            .radio {
+                display: inline-block;
+                margin-top: 0;
+                @include mq('mobile') {
+                    display: block;
+                    margin-left: 0;
+                    span {
+                        margin-bottom: 20px;
+                    }
+                }
+                input[type="radio"]:checked + label:before {
+                    background-position: -367px -71px !important;
+                }                    
+                input[type="checkbox"]:checked + label:before {
+                    background-position: -383px -70px !important;
+                }                    
+                label {
+                    padding-left: 24px;
+                    font-weight: 500;
+                    &:before {
+                        top: 3px;
+                    }
+
+                }
+            }
+            .modal-header {
+                border-bottom: 0;
+                h4 {
+                    @extend .color-5;
+                    font-weight: 700;
+                }
+                .close {
+                    position: relative;
+                    right: -30px;
+                    top: -84px;
+                    z-index: 1051; 
+                    line-height: 0;               
+                    opacity: 0.9;
+                    @include mq('mobile') {
+                        right: -17px;
+                        top: -50px;
+                    }
+                }
+            }
+            .modal-body {
+                padding-bottom: 0;
+                span.h4 {
+                    font-weight: 500;
+                    @include mq('mobile') {
+                        margin-bottom: 20px;
+                        display: block;
+                    }
+
+                }
+                .professor__modal{
+                    .professor__img {
+                        @include mq('mobile') {
+                            text-align: center;
+                        }
+                    }
+                    .professor__descrip {
+                        height: 600px;
+                        max-height: 50vh;
+                        padding: 10px 15px;
+                        margin-top: 15px;
+                    }
+
+                }
+
+            }
+            .modal-footer {
+                .btn-link2 {
+                    padding-left: 0;
+                }
+                #InputFile {
+                    display: none;
+                }
+                #counter {
+                    background: transparent;
+                    border: none;
+                    float: right;
+                    margin-top: 15px;
+                    @extend .paragraph-1, .color-3;
+                }
+                .modal__buttons {
+                    padding-top: 25px;
+                    @include mq('mobile') {
+                        > * {
+                            display: block;
+                            width: 100%;
+                            line-height: 40px;
+                            font-size: 11px;
+                        }
+                    }
+                }
+                border-top: none;
+                text-align: left;
+                padding: 0;
+            }
+        }        
+    }
+}

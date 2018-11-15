@@ -1,0 +1,63 @@
+form {
+ @extend .color-5;
+    /* checkbox aspect */
+    input[type="radio"],
+    input[type="checkbox"] {
+        visibility: hidden;
+    }
+    input[type="radio"] + label,
+    input[type="checkbox"] + label {
+        positon: relative;
+        padding-left: 33px;
+    }
+    input[type="radio"] + label:before,
+    input[type="checkbox"] + label:before {
+        content: '';
+        @extend .icn;
+        position: absolute;
+        left: 0;
+        top: 6px;
+        width: 17px;
+        height: 16px;
+        margin-right: 10px;
+        background-position: -367px -1px!important;
+        
+    }
+    
+    input[type="checkbox"] + label:before {
+        background-position: -383px -1px!important;
+    }
+
+    input[type="radio"]:checked + label:before {
+        background-position: -367px -18px!important;
+    }
+    
+    input[type="checkbox"]:checked + label:before {
+        background-position: -383px -18px!important;
+    }
+    .radio,
+    .checkbox {
+        label {
+            line-height: 20px;
+            vertical-align: middle;
+            padding-left: 0;
+  
+        }
+    }
+}
+.form-control {
+    height: auto;
+    padding: 0 12px;
+    line-height: 40px;
+    color: #555555;
+    background-color: transparent;
+    background-image: none;
+    border: 1px solid $color-4;
+    box-shadow: none;
+    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    &:focus {
+        border-color: $color-1;
+        outline: 0;
+        box-shadow: none;
+    }
+}

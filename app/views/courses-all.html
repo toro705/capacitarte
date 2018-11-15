@@ -1,0 +1,36 @@
+ @@include('head.html')     
+ @@include('nav.html')     
+
+    <section id="courses">
+      <div class="container-fluid">
+        <div class="courses__courses row">
+            @@include('preloader.html')
+		        <div class="col-xs-12">
+		          <ul class="courses-nav list-inline list-unstyled">
+		            <li><a class="active" href="courses-all.html">Todos</a></li>
+		            <li><a href="courses-inprogress.html">En curso</a></li>
+		            <li><a href="courses-finished.html">Finalizados</a></li>
+		          </ul>
+		        </div>
+            	<div class="clearfix"></div>  
+				
+				@@include('boxup.html')  
+				@@include('coursebox-3.html')  
+				@@include('coursebox-3.html')  
+				@@include('coursebox-1.html')  
+				@@include('coursebox-2.html')  
+				@@include('coursebox-1.html')  
+				@@include('coursebox-2.html')  
+				@@include('coursebox-1.html')  
+				@@include('coursebox-2.html')  
+
+
+        </div>
+      </div>    
+    </section>
+@@include('footer.html')
+<script>
+	$(document).ready(function(){
+		App.infiniteScroll();
+	});
+</script>

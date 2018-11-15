@@ -1,0 +1,219 @@
+.foro{
+	width: 100%;
+	@include mq('mobile') {
+		padding: 0;
+	}
+	.nav-tabs {
+		position: relative;
+		z-index: 2;
+		border: none;
+		li {
+			box-shadow: 1px -4px 9px -1px rgba(109, 109, 109, 0.2);
+			a {
+				border: none;
+				padding: 10px 37px;
+				@extend .color-4;
+				@include on-event {
+					border: none;
+					background: $color-12;
+					color: $color-1;
+				}
+				@include mq('mobile') {
+					padding: 10px 22px;
+					font-size: 16px;
+					line-height: 18px;		
+				}
+			}
+			&.active {
+				a {
+					@extend .color-1;		
+				}
+			}
+		}
+	}
+	.filters__top {
+		@extend .col-xs-12;
+		display: block;
+		.search {
+			position: relative;
+			width: auto;
+			max-width: 380px;
+			width: 100%;
+			@include mq('tablet') {
+				max-width: 250px;
+			}
+			@include mq('mobile') {
+				max-width: 100%;
+			}
+			&:before {
+				content: " ";
+				@extend .icn, .icn-22;
+			    position: absolute;
+			    right: 10px;
+			    top: 13px;
+   			    line-height: 34px;
+			    pointer-events: none;
+			    color: #bdbdbd;			
+			}
+			input {
+				width: 100%;
+				padding-right: 25px;
+			}
+			.btn {
+				line-height: 32px;
+			}
+		}
+		@include mq('mobile') {
+			padding-left: 15px;
+			padding-right: 15px;
+			.search {
+				width: 100%;
+				margin-bottom: 15px;
+
+			}
+			.btn-link {
+				float: left!important;
+				padding: 0;
+				margin-bottom: 15px;
+			}
+			.btn-primary {
+				width: 49px;
+			    height: 49px;
+			    border-radius: 50%;
+			    font-size: 70px;
+			    font-weight: 100;
+			    line-height: 49px;	
+			    position: relative;
+			    padding: 0;
+			    text-align: center;
+			    bottom: -24px;			
+			}
+		}
+	}
+	.foro__head {
+		padding: 25px 0 8px;
+		border-bottom: $color-4;
+		> div:nth-child(5) {
+				padding-left: 0;
+		}
+	}
+	#foro {
+		>.panel-default {
+		    border: none; 
+		    background: $color-12;
+		    border-bottom: 1px solid $color-4;
+		    margin: 0;
+		    border-radius: 0;
+		    box-shadow: none;
+		    @include on-event {
+				@extend .bg-11;
+		    }
+			.panel-heading,
+			.panel-collapse {
+			    width: 100%;		
+			}
+			.panel-collapse{
+				@extend .bg-11;
+				&.in {
+				}
+				> div {
+					padding: 20px 15px;
+				}
+			}
+			.panel-heading {
+				padding: 0;
+				background: inherit;
+				border: none;
+				h4 {
+					a {
+						display: block;
+						width: 100%;
+						padding: 24px 0;
+						&[aria-expanded="true"] {
+							@extend .bg-11;
+						}
+						> * {
+							line-height: 35px;
+							> * {
+								vertical-align: middle;								
+								display: inline-block;
+								@extend .paragraph-1;
+							}
+							p {
+								margin: 0;
+							}
+						}
+						.foro__titulo {
+							p {
+								@extend .h4;
+							}
+							@include mq('mobile') {
+								margin-bottom: 15px;
+							}
+						}
+						.foro__fechahora {
+							p {
+								color: $color-3	;
+								font-weight: 500;
+								span {
+									margin-left: 5px;
+									font-weight: 300;
+									@include mq('desktop-lg') {
+										margin-left: 0;
+									}
+								}
+							}							
+						}
+						.foro__estado {
+							padding-left: 0;
+						}
+						.foro__alumno {
+							img {
+								margin-right: 10px;
+								@include mq('desktop-sm') {
+									margin-right: 3px;
+								}
+							}
+							p {
+							    width: calc(100% - 45px);
+							    word-break: break-word;
+							}							
+							
+						}
+						@include mq('mobile') {
+							padding-top: 35px;
+							.foro__comentario {
+								padding-left: 0;
+								p {
+									display: block;
+								}
+							}
+						}
+					}
+				}
+				&.panel-collapse {
+					.panel-body {
+						border: none;
+					}
+				}
+			}
+			.panel-body {
+				border: none;
+			}
+		}
+	}
+	.tab-pane {
+		> span {
+			@extend .h3;
+			vertical-align: middle;
+			margin-left: 15px;
+		}
+		> a.btn-link {
+				padding-left: 15px;
+				font-weight: 800;
+				line-height: 30px;
+				vertical-align: middle;
+				color: $color-2;
+		}
+	}
+}

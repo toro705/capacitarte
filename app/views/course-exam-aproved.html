@@ -1,0 +1,42 @@
+   @@include('head.html')     
+   @@include('nav2.html')     
+
+      <section id="course">
+        <div class="container-fluid">
+          <div class="row">
+              @@include('preloader.html')  
+              <div class="col-xs-12"> 
+                <div class="block1 lesson__nav course__finish">
+                    <div class="block1__head">
+                        <p><span>2.6</span>Exámen final módulo 2</p>
+                    </div>
+                    <div class="course__finish__data">
+                        <div class="circle-container">
+                          <i class="icn icn-17"></i>
+                        </div>
+                        <h2 class="color-1">Felicitaciones,<br class="visible-xs">   aprobaste el examen!</h2>
+                        <h4>Acertaste 9 de 10 preguntas</h4>
+                        <a href="course-exam-answers.html">VER RESPUESTAS</a>
+                    </div>
+                    <a href="course-lesson.html" class="lesson__nav__controller prev">
+                      <div class="icn arrow"></div>
+                      <div class="lesson__nav__controller__text">
+                        <p>Clase <br class="visible-xs">Anterior</p>
+                        <p class="hidden-xs"><span>1.7</span> Exámen final módulo 1</p>
+                      </div>
+                    </a> <!-- end lesson__nav__controller -->
+                    <a href="course-lesson.html" class="lesson__nav__controller next">
+                      <div class="icn arrow"></div>
+                      <div class="lesson__nav__controller__text">
+                        <p>Clase <br class="visible-xs">Siguiente</p>
+                        <p class="hidden-xs"><span>1.8</span> Ejemplos de horas extras</p>
+                      </div>
+                    </a> <!-- end lesson__nav__controller -->
+                    <span class="clearfix"></span>
+                </div> <!-- end block1 -->
+              </div>
+             
+        </div>
+      </div>    
+    </section>
+@@include('footer.html')

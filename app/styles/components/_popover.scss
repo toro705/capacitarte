@@ -1,0 +1,13 @@
+.popover {
+    padding: 0;
+    border-radius: 0;
+    border: none;
+    max-height: 150px;
+    @include box-shadow(1px, 1px, 27px, 3px rgba(109, 109, 109, 0.87));
+    .arrow {
+        display: none;
+    }
+    .popover-content {
+        padding: 0;
+    }
+}

@@ -1,0 +1,219 @@
+   @@include('head.html')     
+   @@include('nav2.html')     
+
+      <section id="courses-dashboard">
+        <div class="container-fluid">
+          <div class="courses__dashboard row">
+              @@include('preloader.html')  
+  		        <div class="col-xs-12 col-sm-5 pull-left">
+                  <a href="course-map.html" class="block1 dashboard__progress block1__hover">
+                    <div class="block1__head">
+                      <p>Progreso</p>
+                    </div>
+                    <div class="dashboard__progress__circle text-center">
+                        <div class="c100 p25 big"><!-- la clase p indica el porcentaje del total alcanzado -->
+                          <span>25</span>
+                          <div class="slice">
+                            <div class="bar"></div>
+                            <div class="fill"></div>
+                          </div>
+                        </div>                
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="dashboard__progress__data">
+                        <p>Clases</p>
+                        <span class="pull-right">4/10</span>
+                    </div>
+                    <div class="dashboard__progress__data">
+                        <p>Exámenes</p>
+                        <span class="pull-right">1/2</span>
+                    </div>
+                  </a>
+  		        </div> <!-- end progress block1  --> 
+              <div class="col-xs-12 col-sm-7 pull-right">
+                  <div class="block1 dashboard__activity">
+                    <div class="block1__head">
+                      <p>Actividad</p>
+                      <a href="course-map.html" class="pull-right"><span>VER TODAS</span> <span class="hidden-xs">LAS ACTIVIDADES</span></a>
+                      <div class="clearfix"></div>
+                    </div>
+                    <div class="dashboard__activity__last hidden-xs">
+                        <p>Última actividad <span>hace 5 días</span></p>
+                        <span>2.1</span><a href="course-lesson.html">Taller Práctico de temas de liquidación  de sueldos.</a><span><i class="icn icn-11"></i></span>
+
+                    </div>
+                    <div class="dashboard__activity__next">
+                        <p>Clase Actual</p>
+                        <span>2.2</span><p>Ejemplos de cada tema vistos en el curso teórico de sueldos</p>
+                    </div>
+                    <div class="dashboard__activity__continue">
+                      <a href="course-lesson.html" class="btn btn-md btn-primary ">CONTINUAR</a>
+                      <div class="clearfix"></div>
+                    </div>
+                  </div>
+
+              </div> <!-- end activity block1 -->
+              
+              <div class="col-xs-12 col-sm-7 pull-right hidden-xs">
+                  <div class="block1 dashboard__query">
+                      <div class="block1__head">
+                        <p>Tus consultas</p>
+                        <a href="foro.html" class="pull-right">IR AL FORO</a>
+                        <div class="clearfix"></div>
+                      </div>
+                      <button type="button" class="dashboard__query__query collapsed" role="button" data-toggle="collapse" href="#query1" aria-expanded="false">
+                          <div class="dashboard__query__question">
+                              <span>20/08</span><p>¿Puedo liquidar en dólares?</p><span class="text-primary">Pendiente</span>
+                          </div>
+                          <span class="clearfix"></span>
+                          <div class="collapse dashboard__query__response" id="query1">
+                            @@include('comments2.html')
+                            <div class="clearfix"></div>
+                          </div>   
+                          <span class="clearfix"></span>
+
+                      </button> <!-- end query -->
+                      <button type="button" class="dashboard__query__query collapsed" role="button" data-toggle="collapse" href="#query2" aria-expanded="false">
+                          <div class="dashboard__query__question">
+                            <span>22/08</span><p>¿Me conviene abrir la liquidación en distintos ítems o liquidar todo junto?</p><span class="text-success">Respondida</span>
+                          </div>
+                          <span class="clearfix"></span>
+                          <div class="collapse dashboard__query__response" id="query2">
+                              @@include('comments2.html')
+                             
+                            <div class="clearfix"></div>
+                          </div>   
+                          <span class="clearfix"></span>
+
+                      </button> <!-- end query -->
+                      <button type="button" class="dashboard__query__query collapsed" role="button" data-toggle="collapse" href="#query3" aria-expanded="false">
+                          <div class="dashboard__query__question">
+                            <span>23/08</span><p>¿Puedo liquidar en dólares?</p><span class="text-success">Respondida</span>
+                          </div>
+                          <span class="clearfix"></span>
+                          <div class="collapse dashboard__query__response" id="query3">
+                            @@include('comments2.html')
+                            <div class="clearfix"></div>
+                          </div>   
+                          <span class="clearfix"></span>
+
+                      </button> <!-- end query -->
+                  </div>
+              </div> <!-- end activity block1  visible en no mobile-->
+
+              <div class="col-xs-12 col-sm-5 pull-left">
+                  <div class="block1 dashboard_professors">
+                    <div class="block1__head">
+                      <p>Profesores</p>
+                    </div>
+                    <div class="professor">
+                      <div class="professor__img"><img src="img/user-default.png" alt="User Img" class="img-responsive"></div>
+                      <button  type="button" data-toggle="modal" data-target="#profesor1" class="professor__data">
+                        <p class="h4">Daiana Arriola Gonsalez</p>
+                        <p>Contador. Socio del estudio Lagomarsino & Juarez</p>
+                      </button>
+                    </div> <!-- end professor -->
+                    <div class="professor">
+                      <div class="professor__img"><img src="img/user-default.png" alt="User Img" class="img-responsive"></div>
+                      <button  type="button" data-toggle="modal" data-target="#profesor1" class="professor__data">
+                        <p class="h4">Mariana Carlovich</p>
+                        <p>Contadora. Responsable de sector sueldos de innova SRL</p>
+                      </button>
+                    </div> <!-- end professor -->
+                  </div>
+              </div> <!-- end progress block1  --> 
+
+              <div class="modal fade" id="profesor1" tabindex="-1" role="dialog" aria-labelledby="profesor1">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content" method="" action="">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="icn icn-23"></i></button>
+                      <h4 class="modal-title" id="myModalLabel">Profesor Roberto Rodriguez</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row professor__modal">
+                          <div class="col-sm-2 professor__img">
+                            <img src="img/profesor1.png" alt="" class="img-responsive">
+                          </div>
+                          <div class="col-sm-10 scrollbar-outer professor__descrip" style="height: 600px;">
+                              <strong><span style="font-size:16px;"><span style="font-family: tahoma,geneva,sans-serif;">Cdor. Alberto Patiño&nbsp; </span></span></strong></p>
+                              <p style="TEXT-ALIGN: left">
+                                </p>
+                              <p style="TEXT-ALIGN: left">
+                                <br>
+                                <span style="font-size:14px;"><span style="font-family: tahoma,geneva,sans-serif;"><strong><u>FORMACIÓN ACADÉMICA</u></strong></span></span></p>
+                              <p style="TEXT-ALIGN: left">
+                                <span style="font-size:14px;"><span style="font-family: tahoma,geneva,sans-serif;"><strong>Contador Público</strong><br>
+                                Universidad Nacional de Buenos Aires</span></span></p>
+                              <p style="TEXT-ALIGN: left">
+                                <span style="font-size:14px;"><span style="font-family: tahoma,geneva,sans-serif;"><strong>Master en Negocios Internacionales</strong><br>
+                                Universidad de Miami</span></span></p>
+                              <p style="TEXT-ALIGN: left">
+                                <span style="font-size:14px;"><span style="font-family: tahoma,geneva,sans-serif;"><strong>Pos-grado en Finanzas en IESA.<br>
+                                Pos-grado Procesos y Re-ingeniería </strong><br>
+                                Massachussets Institute of Technology (MIT)<br>
+                                &nbsp;</span></span></p>
+                              <p style="TEXT-ALIGN: left">
+                                <span style="font-size:14px;"><span style="font-family: tahoma,geneva,sans-serif;"><strong><u>TRAYECTORIA LABORAL</u></strong></span></span></p>
+                              <p style="TEXT-ALIGN: left">
+                                <span style="font-size:14px;"><span style="font-family: tahoma,geneva,sans-serif;"><strong>TELCORDIA (Brasil)</strong><br>
+                                Empresa dedicada a la creación de SW especializado en Telecomunicaciones, su implementación, estudio de procesos técnicos y asesoramiento en el área de Sistemas de Información especializados.</span></span></p>
+                              <p style="TEXT-ALIGN: left">
+                                <span style="font-size:14px;"><span style="font-family: tahoma,geneva,sans-serif;"><strong>INTESA Alianza Estratégica entre SAIC</strong> (Science Applicacation International Corporation) y Petróleos de Venezuela S.A. (empresa estatal venezolana). Caracas, Venezuela.<br>
+                                Outsourcing de&nbsp; Tecnología de la Información, creación de Software especializado, análisis e implementación de procesos, técnicos y administrativos, administración de la Procura o “Material Management” de Software y Hardware, asesoramiento sobre tendencias globales y regionales sobre el área de Sistemas de Información. Vicepresidente de Finanzas&nbsp; desde Enero 1999 hasta Febrero 2004.</span></span></p>
+                              <p style="TEXT-ALIGN: left">
+                                <span style="font-size:14px;"><span style="font-family: tahoma,geneva,sans-serif;"><strong>DOW CHEMICAL CORPORATION.</strong> (Varias Asignaciones nacionales e internacionales). Posiciones en Argentina, Brasil, Perú, Estados Unidos y Venezuela, desde 1976 hasta 1994.<br>
+                                Supervisor de Contabilidad en Argentina.<br>
+                                • Dowell Schlumberger), Gerente de Contabilidad.<br>
+                                • Dowell Schlumberger, Gte. de Administración y Finanzas&nbsp; Regional para la División del Pacífico. (Perú, Colombia y Ecuador.<br>
+                                • Dowell Schlumberger, asistente principal al Contralor del Área Latinoamericana.<br>
+                                • Dow Chemical, en Venezuela, Contralor.<br>
+                                • Dow Chemical, (Latin América Unit, en Coral Gables, USA), como Analista de Negocios para 2 negocios principales: Agro y Farmacéutico.<br>
+                                • Dow Chemical, Contralor en&nbsp; Venezuela.</span></span></p>
+                              <p style="TEXT-ALIGN: left">
+                                <span style="font-size:14px;"><span style="font-family: tahoma,geneva,sans-serif;"><strong>Xerox Coporation:</strong> Director de Finanzas Venezuela</span></span></p>
+                              <p style="TEXT-ALIGN: left">
+                                <span style="font-size:14px;"><span style="font-family: tahoma,geneva,sans-serif;"><strong>Sade Argentina</strong> (Joint Venture entre GE y Sade Cogepi)<br>
+                                Analista Fiananciero</span></span></p>
+                              <p style="TEXT-ALIGN: left">
+                                <span style="font-size:14px;"><span style="font-family: tahoma,geneva,sans-serif;"><strong>Mercedes Benz Argentina</strong><br>
+                                Analista</span></span></p>
+                              <p style="TEXT-ALIGN: left">
+                                <span style="font-size:14px;"><span style="font-family: tahoma,geneva,sans-serif;">&nbsp;</span></span><br>
+                                <strong style="font-family: tahoma, geneva, sans-serif; font-size: 14px;"><u>EXPERIENCIA DOCENTE</u></strong></p>
+                              <p style="TEXT-ALIGN: left">
+                                <span style="font-size:14px;"><span style="font-family: tahoma,geneva,sans-serif;"><strong>UCES. Carrera de Dirección de Negocios.</strong><br>
+                                Profesor de las materias:<br>
+                                Sistemas de Información Gerencial I y II<br>
+                                Medición de Desempeño</span></span></p>
+                              <p style="TEXT-ALIGN: left">
+                                <span style="font-size:14px;"><span style="font-family: tahoma,geneva,sans-serif;"><strong>UNIVERSIDAD DEL SALVADOR. Carrera de Relaciones Públicas</strong><br>
+                                Profesor de las materias:<br>
+                                Administración de Empresas<br>
+                                Comunicación Social</span></span></p>
+                              <p style="TEXT-ALIGN: left">
+                                <span style="font-size:14px;"><span style="font-family: tahoma,geneva,sans-serif;">&nbsp;</span></span></p>
+                          </div>
+                        </div>
+                    </div>
+     
+
+                  </div>
+                </div>
+              </div>  <!-- fin modal del profesor --> 
+
+  		
+              <div class="col-xs-12 col-sm-7 pull-right visible-xs">
+              </div> <!-- end activity block1  visible en mobile-->
+
+
+        </div>
+      </div>    
+    </section>
+@@include('footer.html')
+<script>
+  $(document).ready(function(){
+      App.dashboardResponsiveQuerys();
+      App.customScroll();
+    });
+</script>

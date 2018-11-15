@@ -1,0 +1,79 @@
+   @@include('head.html')     
+   @@include('nav2.html')     
+
+      <section id="course-exam">
+        <div class="container-fluid">
+          <div class="row">
+              @@include('preloader.html')  
+  		        <div class="col-lg-12">
+                <div class="block1 course__exam">
+                    <div class="block1__head">
+                      <p><span>2.6</span>Exámen final módulo 2</p>
+                    </div>
+                    <form action="">
+                      <p>Respondé el siguiente cuestionario</p>
+                      <ol class="list-unstyled">  
+                        <li>  
+                            <p><b>1. En qué moneda debe liquidarse el sueldo en Argentina</b></p>
+                            <div class="radio">
+                              <input id="value1" type="radio" name="pregunta1" value="">
+                              <label for="value1">
+                                Pesos Argentinos
+                              </label>
+                            </div>
+                            <div class="radio">
+                              <input id="value2" type="radio" name="pregunta1" value="">
+                              <label for="value2">
+                                Dólares estadounidenses
+                              </label>
+                            </div>
+                            <div class="radio">
+                              <input id="value3" type="radio" name="pregunta1" value="">
+                              <label for="value3">
+                                Es indistinto
+                              </label>
+                            </div>
+                        </li>
+                        <li>  
+                            <p><b>5. En qué moneda debe liquidarse el sueldo en Argentina</b></p>
+                            <div class="checkbox">
+                              <input id="value4" type="checkbox" value="1">
+                              <label for="value4">
+                                Pesos Argentinos
+                              </label>
+                            </div>
+                            <div class="checkbox">
+                              <input  id="value5" type="checkbox" value="2">
+                              <label for="value5">
+                                Dólares estadounidenses Dólares estadounidensesDólares estadounidensesDólares estadounidenses
+                              </label>
+                            </div>
+                            <div class="checkbox">
+                              <input id="value6" type="checkbox" value="3">
+                              <label for="value6">
+                                Es indistinto
+                              </label>
+                            </div>
+                        </li>
+                      </ol>
+                      <button type="submit" class="btn btn-md btn-primary">ENVIAR</button>
+                    </form>
+                  
+        
+                </div> <!-- end block1 -->
+              </div>
+
+  
+        </div>
+      </div>    
+    </section>
+@@include('footer.html')
+<script>
+$(document).ready(function () {
+    App.customScroll();
+    // window.onresize = function() {
+    //   App.customScroll();
+    // }
+});
+
+</script>

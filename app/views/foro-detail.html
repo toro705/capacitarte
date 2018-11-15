@@ -1,0 +1,62 @@
+   @@include('head.html')     
+   @@include('nav2.html')     
+
+      <section id="foro-section">
+        <div class="container-fluid">
+          <div class="row">
+              @@include('preloader.html')  
+              <div class="col-xs-12 foro-detalle"> 
+                    <div class="block1 foro__detalle">  
+                      <div class="block1__head">
+                        <a href="foro.html" class="pull-left visible-xs">← VOLVER</a>
+                        <p class="h3">¿Puedo liquidar en dólares?</p>
+                        <a href="foro.html" class="pull-right hidden-xs">VOLVER AL FORO</a>
+                        <div class="clearfix"></div>
+                        <div class="foro-detalle__titulo">  
+                       
+
+                          <div class="col-xs-3 col-sm-1 col-md-1 foro__fechahora"><p>20.09.16 <br class="visible-sm visible-xs"> <span> 12:45</span></p></div>
+                          <div class="col-xs-7 col-sm-6 foro__alumno"><img src="img/user-default-xs.png" alt="User" class="img-responsive"><p>Juan Alberto</p></div>
+                          <!-- estado visible en mobile -->
+                          
+                          <div class="col-xs-2 visible-xs foro__comentario text-right">
+                            <p><i class="icn icn-20"></i> 2</p><!--vistas -->
+                            <p><i class="icn icn-21"></i> 2</p><!--respuestas   -->
+                          </div>    <!-- Estilos para mobile de las notificaciones de "vistas y respuestas" -->
+                          <div class="hidden-xs col-xs-2 col-sm-5 text-right foro__comentario text-center">
+                            <p><span class="color-2">Vistas</span>2</p>
+                            <p class="color-1"><span class="color-2">Respuestas</span>2</p>
+                          </div>
+                          <!-- estado visible en el resto de los dispositivos -->
+                          <span class="clearfix"> </span>                        
+                        </div> 
+                      </div>
+                      <div class="col-sm-10 col-sm-offset-1">  
+                        @@include('comments3.html')
+                      </div>
+                      <div class="clearfix"></div>
+                    </div>
+              </div>
+             
+        </div>
+      </div>    
+    </section>
+@@include('footer.html')
+<script>
+      function textCounter(field,field2,maxlimit) {
+        var fieldId = field.getAttribute('id');
+         var countfield = document.getElementById(fieldId).nextElementSibling;
+         if ( field.value.length > maxlimit ) {
+          field.value = field.value.substring( 0, maxlimit ) * ' caracteres restantes';
+          return false;
+       } else {
+        countfield.value = maxlimit - field.value.length + ' caracteres restantes';
+       }
+      } 
+</script>
+
+<script>
+  jQuery(document).ready(function() {
+    App.comment();
+  });
+</script>

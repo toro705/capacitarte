@@ -1,0 +1,59 @@
+@charset 'UTF-8';
+
+// 1. Configuration and helpers
+@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+
+@import
+  'abstracts/variables',
+  'abstracts/functions',
+  'abstracts/mixins';
+
+// 2. Vendors
+@import
+  'vendor/customScroll',
+  'vendor/normalize',
+  'vendor/circle';
+
+// 3. Base stuff
+@import
+  'base/base',
+  'base/fonts',
+  'base/typography',
+  'base/helpers';
+
+// 4. Layout-related sections
+@import
+  'layout/header',
+  'layout/nav',
+  'layout/footer';
+
+// 5. Components
+@import
+  'components/block1',
+  'components/comments',
+  'components/forms',
+  'components/certificate',
+  'components/modal',
+  'components/popover',
+  'components/lessonNav',
+  'components/coursebox',
+  'components/itemliststate',
+  'components/circlefinished',
+  'components/sprites',
+  'components/button',
+  'components/boxup',
+  'components/preloader';
+
+// 6. Page-specific styles
+@import
+  'pages/courses',
+  'pages/courseExam',
+  'pages/certificates',
+  'pages/home',
+  'pages/foro',
+  'pages/foroDetalle',
+  'pages/login';
+
+// 7. Themes
+@import
+  'themes/default';

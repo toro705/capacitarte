@@ -1,0 +1,178 @@
+.course__map {
+    .itemliststate {
+        .itemliststate__item {
+            a{
+                .itemliststate__item__cell {
+                    vertical-align: middle;
+                    @extend .paragraph-1;
+                    @include mq('mobile') {
+                        vertical-align: top;
+                    }
+
+                }
+                >:last-child {
+                    width: 210px;
+                }
+                >:first-child {
+                    width: 50px;
+                }
+
+                .mainItem {
+                    width: calc(100% - 215px);
+                    @extend .color-2;
+                }
+                @include mq('mobile') {
+                    .itemliststate__item__cell  {
+                        vertical-align: top;
+                        padding: 5px;
+                    }
+                    .mainItem {
+                        width: 100%;
+                        button {
+                            margin-top: 15px;
+                            width: 100%;
+                        }
+                    }
+                    >:first-child {
+                        width: 30px;
+                    }
+                    >:last-child {
+                        width: auto;
+                        .icn-11 + .icn-12,
+                        .icn-11 + .icn-13 {
+                            display: none;
+                            margin-left: 0;
+                        }
+                    }                    
+                }
+                
+            }
+        }
+    }
+}
+.itemliststate {
+    @extend .list-unstyled;
+    .itemliststate__item {
+        display: block;
+        width: 100%;
+            a {
+                display: table;
+                width: 100%;
+                .itemliststate__item__cell {
+                    @extend .paragraph-1, .color-3;
+                    display: table-cell;
+                    vertical-align: top;
+                    font-weight: 700;
+                    padding: 10px;
+                }
+                >:first-child {
+                    font-weight: 500;
+                    text-align: center;
+                    width: 30px;
+                }
+                .mainItem {
+                    @extend .color-5;
+                }
+                >:last-child {
+                    text-align: right;
+                    i:last-of-type {
+                        margin-left: 25px;
+                    }
+                }
+                @include on-event {
+                    .mainItem {
+                        @extend .color-5;
+                        padding-left: 15px;
+                    }
+                }
+                @include mq('desktop-md') {
+                    .itemliststate__item__cell  {
+                        padding: 7px;
+                    }
+
+                }
+                @include mq('tablet')  {
+                    .itemliststate__item__cell  {
+                        padding: 5px;
+                    }
+                    >:first-child {
+                        width: 20px;
+                    }
+                    
+                }
+                @include mq('mobile') {
+                    .itemliststate__item__cell  {
+                        vertical-align: top;
+                        padding: 5px;
+                    }
+                    .mainItem {
+                        button {
+                            margin-top: 15px;
+                            width: 100%;
+                        }
+                    }
+
+                    >:first-child {
+                        width: 30px;
+                    }
+                    >:last-child {
+                        width: auto;
+                        .icn-11 + .icn-12,
+                        .icn-11 + .icn-13 {
+                            display: none;
+                        }
+
+                    }
+                    @include on-event {
+                        .mainItem {
+                            padding-left: 5px;
+                        }
+                    }
+                }
+            }
+
+    }
+}
+&.dashboard__activity {
+
+        .dashboard__activity__next,
+        .dashboard__activity__last {
+            p:first-of-type{
+                @extend .paragraph-1, .color-3;
+                margin-bottom: 17px;
+                display: block;
+                width: 100%;
+                font-weight: 500;
+                span {
+                    float: right;
+                    display: inline-block;
+                    padding: 0;
+                }
+            }
+            span {
+                display: table-cell;
+                vertical-align: middle;
+             }
+            span:first-of-type {
+                font-weight: 500;
+                padding-right: 21px;
+             }
+        }
+        .dashboard__activity__last {
+            padding-top: 4px;
+            border-bottom: 1px solid $color-4;
+            a {
+                @extend .paragraph-1, .color-5;
+                display: table-cell;
+                vertical-align: middle;
+                font-weight: 700;
+                width: 100%;
+                @include on-event {
+                    @extend .color-1;
+                    padding-left: 10px;
+                }
+            }
+        }
+
+
+    }

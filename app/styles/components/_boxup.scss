@@ -1,0 +1,59 @@
+.boxup-container {
+    padding: 0 15px;
+    visibility: hidden;
+    position: fixed;
+    top: 45px;
+    width: 100%;
+    z-index: 1030;
+    opacity: 1;
+    text-align: center;
+    .boxup {
+        padding: 10px 60px;
+        border-radius: 6px;
+        line-height: 75px;
+        display: inline-block;
+        word-break: break-all;
+        @extend .bg-12;
+        @include box-shadow(1px, 1px, 18px, 1px rgba(109,109,109,0.2));
+
+        .circle-finished {
+            display: table-cell;
+        }
+        .boxup-data {
+            display: table-cell;
+            padding-left: 10px; 
+            line-height: 44px;
+            p {
+                @extend .paragraph-1, .color-1;
+                font-weight: 600;
+                display: inline-block;
+            }
+            
+        }
+        @include mq('mobile') {
+            padding: 19px 22px;
+            text-align: left;
+            .circle-finished {
+                float: left;
+            }
+            .boxup-data {
+
+                p {
+                    line-height: 16px;
+                    vertical-align: middle;
+                }
+            }
+
+        }
+
+    }
+    @include mq('mobile') {
+        top: 81px;
+        display: inline-block;
+    }
+    p {
+        @extend .paragraph-1, .color-1;
+        font-weight: 600;
+        display: inline-block;
+    }
+}

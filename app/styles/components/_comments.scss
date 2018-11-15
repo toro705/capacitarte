@@ -1,0 +1,302 @@
+.foro {
+    .comments {
+
+        .comments__user ,
+        .comments__admin {
+            .comments__comment {
+                .comments__comment__dialog {
+                    p {
+                        @extend .paragraph-1;
+                        font-weight: normal;
+                    }
+                }
+            }            
+            .comments__sender {
+                .sender__data {
+                     p {
+                        @extend .paragraph-1;
+                        i {
+                            @extend .paragraph-1;
+                        }
+                     }
+                }
+            }
+        }
+        div:last-of-type{
+            .comments__comment {
+                .comments__comment__dialog {
+                    p {
+                        @extend .h4;
+                        font-weight: normal;
+                         
+                    }
+                }
+            }
+
+        }        
+    }
+    
+}
+.comments {
+    padding: 0; 
+    @extend .color-5;
+    > div {
+        padding: 10px 0;
+    }
+    .comments__admin,
+    .comments__user {
+        padding-bottom: 20px;
+        .comments__comment,
+        .comments__sender {
+            font-size: 12px;
+            line-height: 14px;
+            padding-left: 10px;
+            padding-right: 10px;
+            // display: table-cell;
+            vertical-align: middle;
+            text-align: left;
+        }
+        .comments__sender {
+            width: 200px;
+            padding-top: 15px;
+            > div {
+                display: table-cell;
+                float: none;
+                vertical-align: middle;
+            }
+            .sender__img {
+                padding: 4px 15px;
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+            .sender__data {
+                p {
+                    @extend .paragraph-2;
+                    margin-bottom: 0;
+                    i {
+                        font-size: 11px;
+                        line-height: 13px;
+                    }
+                }
+            }
+        }
+        .comments__comment {
+            float: none;
+            width: calc(100% - 200px);
+            @include mq('mobile') {
+                width: 100%;
+            }
+            i {
+                position: absolute;
+                vertical-align: middle;
+                width: 0; 
+                height: 0; 
+                margin-top: 7px;
+
+            }
+            .comments__comment__dialog {
+                @extend .bg-12;
+                border-radius: 5px;
+                padding: 20px;
+                width: auto;
+                float: none;
+                display: inline-block;
+                position: relative;
+                p {
+                    font-weight: 500;
+                    @extend .paragraph-1;
+                    
+                }
+            }
+        }
+    }
+    .comments__admin {
+        .comments__sender {
+            padding-left: 0;
+            float: left;
+            .sender__img {
+                float: right;
+            }
+        }
+        .comments__comment {
+            float: left;
+            .comments__comment__dialog {
+                width: auto;
+                float: left;
+            }
+        }
+        .comments__comment i {
+            right: 100%;
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent; 
+
+            border-right:10px solid $color-12;             
+        }
+
+    }
+        
+    .comments__user {
+        .comments__sender {
+            float: right;
+            .sender__img {
+                float: left;
+            }
+        }
+        .comments__comment {
+            padding-left: 0;
+            float: right;
+            .comments__comment__dialog {
+                width: auto;
+                float: right;
+
+            }
+        }
+        .comments__comment i {
+            left: 100%;
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+            
+            border-left: 10px solid $color-12;
+        }
+    }
+    div:last-of-type{
+        .comments__comment {
+            .comments__comment__dialog {
+                p {
+                    @extend .h4;
+                    font-weight: normal;
+                     
+                }
+            }
+        }
+
+    }
+
+    .comments__actions {
+        text-align: left;
+        >:first-child {
+            padding-left: 0;
+        }
+        > a {
+            display: inline-block;
+        }
+        @include mq('mobile') {
+            > * {
+                display: block;
+                margin-bottom: 20px;
+                padding-left: 0;
+            }
+        }
+        .comments__actions__comment {
+                display: none;
+                textarea {
+                    @extend .bg-12;
+                }
+                #counter {
+                    background: transparent;
+                    border: none;
+                    float: right;
+                    text-align: right;
+                    margin-top: 15px;
+                    @extend .paragraph-1, .color-3;
+                }
+                
+                .checkbox {
+                    margin-bottom: 0;
+                    label{
+                        @extend .paragraph-1;
+                    }
+                }
+                .checkbox {
+                    display: inline-block;
+                    margin-top: 0;
+                    @include mq('mobile') {
+                        display: block;
+                        margin-left: 0;
+                        span {
+                            margin-bottom: 20px;
+                        }
+                    }
+                    input[type="checkbox"]:checked + label:before {
+                        background-position: -383px -70px !important;
+                    }                    
+                    label {
+                        padding-left: 24px;
+                        font-weight: 500;
+                        &:before {
+                            top: 3px;
+                        }
+
+                    }
+                }         
+                @include mq('mobile') {
+                    > * {
+                        display: block;
+                        width: 100%;
+                        line-height: 40px;
+                        font-size: 11px;
+                    }
+                }
+                .comments__actions__comment__buttons {
+                    padding-top: 25px;
+                }            
+        }
+    }
+    @include mq ('tablet') {
+        padding-left: 0;
+        padding-right: 0;
+        .comments__user {
+            padding: 10px 0;
+            .comments__sender {
+                padding-left: 6px;
+                padding-right: 6px;
+
+            }
+        }
+    }
+    @include mq ('mobile') {
+
+        > div {
+            padding: 0;
+        }
+        .comments__comment,
+        .comments__sender {
+            padding: 5px;
+        }
+        .comments__admin,
+        .comments__user {
+            .comments__comment {
+                display: block;
+                float: left;
+                i {
+                    top: 100%;
+                    right: 20px;
+                    margin-top: 0;
+                    left: auto;
+                    border-left: 10px solid transparent;
+                    border-right: 10px solid transparent;
+                    border-bottom: none;
+                    border-top: 10px solid $color-12;;
+                }
+            }
+            .comments__sender {
+                float: right;
+            }
+        }
+        .comments__admin {
+            .comments__comment {
+                i {
+                    right: auto;
+                    left: 20px;;
+                }
+            }
+            .comments__sender {
+                float: left;
+                .sender__img {
+                    float: left;
+                }
+            }
+            
+        }
+    }
+}

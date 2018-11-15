@@ -1,0 +1,79 @@
+#course-exam {
+	.course__exam {
+		form {
+			padding-top: 14px;
+			@include mq('mobile') {
+				padding-top: 0;
+				button {
+					width: 100%;
+				}
+			}
+			> p {
+				@extend .paragraph-1;
+			}
+			ol {
+				li {
+					p{
+						@extend .paragraph-1;
+					}
+					margin-top: 35px;
+					&:last-of-type {
+						margin-bottom: 40px;
+					}
+					@extend .paragraph-1;
+					b {
+						margin-bottom: 10px;
+					}
+					> div {
+						&.checkbox{
+							&.wrong {
+								label{
+									@extend .text-danger;
+									&::before {
+										background-position: -383px -54px !important;
+									}
+								}
+							}
+							&.right {
+								label{
+									@extend .text-success;
+									&::before {
+										background-position: -383px -35px !important;
+									}
+								}
+							}
+						}
+						&.radio{
+							&.wrong {
+								label{
+									@extend .text-danger;
+									&::before {
+										background-position: -367px -54px !important;
+									}
+								}
+							}
+							&.right {
+								label{
+									@extend .text-success;
+									&::before {
+										background-position: -367px -35px !important;
+									}
+								}
+							}
+						}
+						label {
+							line-height: 28px;
+							font-weight: 500;
+						}
+					}
+					@include mq('mobile') {
+						margin-top: 20px;
+						&:last-of-type {
+							margin-bottom: 28px;
+						}
+					}
+				}
+			}
+		}
+	}
+}

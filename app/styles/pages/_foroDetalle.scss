@@ -1,0 +1,158 @@
+.foro-detalle {
+	.block1 {
+		.block1__head {
+			> .h3 {
+				@extend .h3, .color-5;
+				font-weight: 800;
+			}
+			@include mq('mobile') {
+				> .h3 {
+					font-size: 19px;
+					display: block;
+					width: 100%;
+				}
+				padding: 21px 0;
+			}
+			.pull-left.visible-xs {
+				display: block;
+				width: 100%;
+				margin-bottom: 25px;
+			}
+			.foro-detalle__titulo {
+						margin-top: 20px;
+						@include mq('mobile') {
+							margin-top: 0;
+						}
+						> * {
+							line-height: 35px;
+							> * {
+								vertical-align: middle;								
+								display: inline-block;
+								@extend .paragraph-1;
+							}
+							p {
+								margin: 0;
+							}
+						}
+						.foro__fechahora {
+							p {
+								color: $color-4;
+								font-weight: 500;
+								span {
+									margin-left: 5px;
+									font-weight: 300;
+									@include mq('desktop-lg') {
+										margin-left: 0;
+									}
+								}
+
+							}
+							@include mq('mobile') {
+								padding-left: 0;
+							}
+						}
+						.foro__titulo {
+							p {
+								@extend .h4;
+							}
+							@include mq('mobile') {
+								margin-bottom: 15px;
+							}
+						}
+						.foro__comentario {
+							text-align: right;
+							padding-right: 0;
+							p:last-of-type {
+								margin-left: 25px;
+								color:$color-1;
+							}
+							@include mq('mobile') {
+								p:last-of-type {
+									margin-left: 0;
+								}
+							}
+						}
+						.foro__alumno {
+							img {
+								margin-right: 10px;
+								@include mq('desktop-sm') {
+									margin-right: 6px;
+								}
+							}
+							p {
+							    width: calc(100% - 45px);
+							    word-break: break-word;
+							}							
+						}
+						@include mq('mobile') {
+							padding-top: 35px;
+							.foro__comentario {
+								padding-left: 0;
+								p {
+									display: block;
+								}
+							}
+						}				
+			}
+		}
+		.comments 
+			.comments__user {
+				.comments__comment {
+					.comments__comment__dialog {
+						@extend .bg-11;
+						i {
+							border-left-color: $color-11;
+							@include mq('mobile') {
+								border-left-color: transparent;
+								border-top-color: $color-11;
+							}
+						}
+					}
+				}
+			}
+			.comments__admin {
+				.comments__comment {
+					.comments__comment__dialog {
+						@extend .bg-11;
+						i {
+							border-right-color: $color-11;
+							@include mq('mobile') {
+								border-right-color: transparent;
+								border-top-color: $color-11;
+							}
+						}
+					}
+				}
+			}
+			.comments__actions {
+				.comments__actions__comment {
+					border-top: 1px solid $color-4;
+					margin-top: 10px;
+					padding-top: 40px;
+					display: block;
+	                #counter {
+	                    background: transparent;
+	                    border: none;
+	                    float: right;
+	                    text-align: right;
+	                    margin-top: 15px;
+	                    @extend .paragraph-1, .color-3;
+	                }
+					@include mq('mobile') {
+						.checkbox {
+							label {
+								&:before {
+									top: 11px;
+								}
+							}
+						}
+						.comments__actions__comment__buttons {
+							button {
+								width: 100%;
+							}
+						}
+					}
+				}
+			}
+	}
+}

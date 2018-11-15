@@ -1,0 +1,63 @@
+ @@include('head.html')     
+ @@include('nav.html')     
+
+    <section id="user-data">
+      <div class="container-fluid">
+        <div class="row">
+            @@include('preloader.html')  
+            <div class="col-sm-4 col-md-3 col-md-offset-1">
+              <div class="block1 user-data__img text-center">
+                <img src="img/user-default-lg.png" alt="Usuario Default" class="img-responsive">
+                <div class="form-group">
+                  <label for="user-data__img__input" class="color-1">Cambiar imagen de perfil</label>
+                  <input type="file" id="user-data__img__input" class="form-control hidden">
+                </div>
+              </div>
+            </div>                
+            <div class="col-sm-8 col-md-7">
+              <form action=""  class="block1 user-data__data">
+                <div class="form-group col-sm-12 col-md-5 name">
+                  <label for="user-name">NOMBRE</label>
+                  <input class="form-control big" type="text" id="user-name">
+                </div> 
+                <div class="form-group col-sm-12 col-md-7 lastname">
+                  <label for="user-name">APELLIDO/S</label>
+                  <input class="form-control big" type="text" id="user-name">
+                </div> 
+                <span class="clearfix"></span>
+                <div class="form-group">
+                  <label for="user-name">EMAIL</label>
+                  <input class="form-control" type="email" id="user-name">
+                </div> 
+                <div class="form-group">
+                  <label for="user-name">DNI</label>
+                  <input class="form-control" type="tel" id="user-name">
+                </div> 
+                <span class="clearfix"></span>
+                <a class="paragraph-1 color-1" role="button" data-toggle="collapse" href="#modifPass" aria-expanded="false"><b>Modificar contraseña</b></a>
+                <span class="clearfix"></span>
+                <div class="collapse" id="modifPass">
+                  <div class="form-group">
+                    <label for="user-name">CONTRASEÑA ACTUAL</label>
+                    <input class="form-control" type="password" id="user-name" placeholder="Ingresá tu contraseña actual">
+                  </div> 
+                  <div class="form-group">
+                    <label for="user-name">CONTRASEÑA NUEVA</label>
+                    <input class="form-control" type="password" id="user-name" placeholder="Ingresá tu contraseña nueva">
+                  </div> 
+                  <div class="form-group">
+                    <label for="user-name">REPETIR CONTRASEÑA NUEVA</label>
+                    <input class="form-control" type="password" id="user-name" placeholder="Repetí tu contraseña nueva">
+                  </div> 
+                </div>
+                <div>
+                  <button type="submit" class="btn btn-md btn-primary">GUARDAR</button>
+                  <button type="submit" class="btn btn-md btn-link">CANCELAR</button>
+                </div>
+              </form>
+            </div>
+
+        </div>
+      </div>    
+    </section>
+@@include('footer.html')

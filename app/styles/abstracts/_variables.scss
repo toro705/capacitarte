@@ -1,0 +1,74 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');/// Regular font family
+/// @type List
+$text-font-stack: 'Raleway', 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+
+/// Code (monospace) font family
+/// @type List
+$code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace !default;
+
+
+
+
+
+/// Main brand color
+$color-1: #F36736 !default;
+/// Color Texto Default
+$color-2: #646464 !default;
+/// Light grey
+$color-3: #959595 !default;
+/// Medium grey
+$color-4: #b4b4b4 !default;
+/// Dark grey
+$color-5: #000000 !default;
+/// Success
+$color-6: #1FB702 !default;
+/// Danger
+$color-7: #D31515 !default;
+/// primary
+$color-8: #0D4FBF !default;
+/// White
+$color-9: #1FB702 !default;
+/// Light Green
+$color-10: #DEEFDF !default;
+/// Extra Light Grey
+$color-11: #F2F2F2 !default;
+/// white
+$color-12: #FFF !default;
+
+
+
+
+/// Container's maximum width
+/// @type Length
+$max-width: 1180px !default;
+
+
+
+
+
+/// Breakpoints map
+/// @prop {String} keys - Keys are identifiers mapped to a given length
+/// @prop {Map} values - Values are actual breakpoints expressed in pixels
+$breakpoints: (
+  'small': 320px,
+  'medium': 768px,
+  'large': 1024px,
+) !default;
+
+
+
+
+
+
+/// Relative or absolute URL where all assets are served from
+/// @type String
+/// @example scss - When using a CDN
+///   $base-url: 'http://cdn.example.com/assets/';
+$base-url: '/assets/' !default;

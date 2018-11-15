@@ -1,0 +1,49 @@
+#certificates {
+	padding-top: 0;
+	.certificates {
+		h4 {
+			@extend .color-5;
+			margin-bottom: 30px;
+		}
+		padding-top: 100px;
+		padding-left: 20px;
+		padding-right: 20px;
+		@include mq('tablet') {
+			text-align: center;
+		}
+		.visible-xs {
+			a {
+				margin-top: 30px;
+				@include on-event {
+					color: $color-12;
+				}
+			}
+		}
+	}
+	.more-courses {
+		padding-top: 90px;
+		height: 100vh;
+		line-height: calc(100vh - 180px);
+		background-image: url("../img/login.jpg");
+		background-size: cover;
+		background-position: top center;
+		.right__content {
+			visibility:hidden;
+			display: inline-block;
+			width: 100%;
+			padding-left: 90px;
+			height: auto;
+
+			line-height: initial;
+			vertical-align: middle;
+			p {
+				line-height: 55px;
+				font-size: 40px;
+				margin-bottom: 0;
+			}
+			h1 {
+				margin-bottom: 25px;	
+			}
+		}
+	}
+}

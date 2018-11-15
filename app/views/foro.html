@@ -1,0 +1,226 @@
+   @@include('head.html')     
+   @@include('nav2.html')     
+
+      <section id="foro-section">
+        <div class="container-fluid">
+          <div class="row">
+              @@include('preloader.html')  
+              <div class="col-xs-12 foro"> 
+
+
+                  <div class="modal fade" id="nuevoforo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    <div class="modal-dialog" role="document">
+                      <form class="modal-content" method="" action="">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="icn icn-23"></i></button>
+                          <h4 class="modal-title" id="myModalLabel">Realizar consulta</h4>
+                        </div>
+                        <div class="modal-body">
+                            <span class="h4">Querés consultar sobre...</span>
+                            <div class="radio">
+                              <input id="foroTipo1" type="radio" name="consultaSobre" value="foroTipo1">
+                              <label for="foroTipo1">
+                                Contenidos del curso
+                              </label>
+                            </div>
+                            <div class="radio">
+                              <input id="foroTipo2" type="radio" name="consultaSobre" value="foroTipo2">
+                              <label for="foroTipo2">
+                                El funcionamiento de la Plataforma
+                              </label>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <div class="form-group">
+                                <textarea type="text" class="form-control" id="consutla" placeholder="Ingresá tu consulta..." rows="4" onkeyup="textCounter(this,'counter',400);" required></textarea>
+                                <input disabled maxlength="400" size="24" class="hidden-xs" value="400 caracteres restantes" id="counter">               
+
+                            </div>
+                            <div class="form-group fileinput">
+                              <label class="btn btn-sm btn-link2" for="InputFile">+ ADJUNTAR ARCHIVO (MÁXIMO 2 MB)</label>
+                              <input type="file" class="form-control" id="InputFile">
+                            </div>     
+                            <div class="checkbox">
+                              <input id="value4" type="checkbox" value="1" checked>
+                              <label for="value4">
+                                Quiero recibir notificaciones cada vez que alguien responda
+                              </label>
+                            </div>
+                            <div class="text-left modal__buttons">
+                              <button type="submit" class="btn btn-primary btn-md">PREGUNTAR</button>
+                              <button type="reset" class="btn btn-sm btn-link" data-dismiss="modal">CANCELAR</button>
+                            </div>
+                        </div>
+
+                       </form>
+                    </div>
+                  </div>   
+
+                  <div class="clearfix"></div>
+                  <div>
+
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs" role="tablist">
+                      <li role="presentation" class="active block1"><a class="h4" href="#docente" aria-controls="docente" role="tab" data-toggle="tab">Consultas <br class="visible-xs">sobre contenidos</a></li>
+                      <li role="presentation" class="block1"><a class="h4" href="#tecnicas" aria-controls="tecnicas" role="tab" data-toggle="tab">Consultas sobre <br class="visible-xs">la plataforma</a></li>
+                    </ul>
+
+                    <!-- Tab panes -->
+                    <div class="tab-content block1">
+                      <div role="tabpanel" class="tab-pane active" id="docente">
+                          <div class="filters__top">
+                            <div class="form-inline search pull-left">  
+                                <input type="search" class="form-control" placeholder="Buscar consulta">
+                            </div>
+                            <button data-toggle="modal" data-target="#nuevoforo" class="hidden-xs btn btn-xs btn-primary pull-right">REALIZAR CONSULTA</button>
+                            <button data-toggle="modal" data-target="#nuevoforo" class="visible-xs btn btn-lg btn-primary pull-right">+</button>
+                            <button class="btn btn-xs btn-link pull-right">VER TUS CONSULTAS</button>
+                            <div class="clearfix"></div>
+                          </div> <!-- end filters__top -->  
+                          <div class="clearfix"></div>                    
+                          <div class="foro__head hidden-xs">
+                            <div class="col-sm-2 col-md-1"><p>Fecha</p></div>
+                            <div class="col-sm-3 col-md-2 col-lg-2"><p>Alumno</p></div>
+                            <div class="col-sm-4 col-md-7 col-lg-7"><p>Pregunta</p></div>
+                            <div class="col-sm-1 text-center"><p>Vistas</p></div>
+                            <div class="col-sm-2 col-md-1 text-center"><p>Respuestas</p></div>
+                            <div class="clearfix"></div>
+                          </div>
+                
+                          <div class="clearfix"></div>
+                          <div class="panel-group" id="foro" role="tablist" aria-multiselectable="true">
+                              <div class="panel panel-default">
+                                  <div class="panel-heading animated" role="tab" id="foro-1">
+                                    <h4 class="panel-title">
+                                      <a role="button" data-toggle="collapse" data-parent="#foro1" href="#foro1" aria-expanded="false" aria-controls="foro1">
+                                          <div class="col-xs-12 visible-xs foro__titulo"><p>¿Puedo liquidar en dólares?</p></div>
+
+                                          <div class="col-xs-3 col-sm-2 col-md-1 foro__fechahora"><p>20.09.16 <br class="visible-sm visible-xs"> <span> 12:45</span></p></div>
+                                          <div class="col-xs-7 col-sm-3 col-md-2 col-lg-2 foro__alumno"><img src="img/user-default-xs.png" alt="User" class="img-responsive"><p>Juan Alberto</p></div>
+                                          <!-- estado visible en mobile -->
+                                          <div class="hidden-xs col-xs-10 col-sm-4 col-md-7 col-lg-7 foro__titulo"><p>¿Puedo liquidar en dólares?</p></div>
+                                          <div class="col-xs-2 visible-xs foro__comentario text-right">
+                                            <p><i class="icn icn-20"></i> 2</p><!--vistas -->
+                                            <p><i class="icn icn-21"></i> 2</p><!--respuestas   -->
+                                          </div>    <!-- Estilos para mobile de las notificaciones de "vistas y respuestas" -->
+                                          <div class="hidden-xs col-xs-2 col-sm-1 foro__comentario text-center">
+                                            <p>2</p>
+                                          </div>
+                                          <div class="hidden-xs col-sm-2 col-md-1 hidden-xs foro__estado text-center">
+                                            <p class="color-1">2</p>
+                                          </div>
+                                          <!-- estado visible en el resto de los dispositivos -->
+                                          <span class="clearfix"> </span>
+                                      </a>
+                                    </h4>
+                                  </div>
+                                  <div id="foro1" class="panel-collapse collapse animated" role="tabpanel" aria-labelledby="foro1">
+                                    <div class="panel-body">
+                                        <div class="row">
+                                          <div class="col-md-2"></div>
+                                          <div class="col-md-1"></div>
+                                          <div class="col-md-9 comentario">
+                                          @@include('comments.html')
+                                          <div class="clearfix"></div>
+
+                                          </div>
+                                        </div>
+                                    </div>
+                                  </div>
+                              </div> <!-- Panel -->
+                             
+                          </div> <!-- End Panel-group -->
+                          <span> +</span><a href="javascript:;" class="btn-sm btn-link">CARGAR LAS SIGUIENTES CONSULTAS</a>
+                      </div>
+                      <div role="tabpanel" class="tab-pane" id="tecnicas">
+                          <div class="filters__top">
+                            <div class="form-inline search pull-left">  
+                                <input type="search" class="form-control" placeholder="Buscar consulta">
+                            </div>
+                            <button data-toggle="modal" data-target="#nuevoforo" class="hidden-xs btn btn-xs btn-primary pull-right">REALIZAR CONSULTA</button>
+                            <button data-toggle="modal" data-target="#nuevoforo" class="visible-xs btn btn-lg btn-primary pull-right">+</button>
+                            <button class="btn btn-xs btn-link pull-right">VER TUS CONSULTAS</button>
+                            <div class="clearfix">  </div>
+                          </div> <!-- end filters__top -->  
+                          <div class="clearfix"></div>                    
+                          <div class="foro__head hidden-xs">
+                            <div class="col-sm-2 col-md-1"><p>Fecha</p></div>
+                            <div class="col-sm-3 col-md-2 col-lg-2"><p>Alumno</p></div>
+                            <div class="col-sm-4 col-md-7 col-lg-7"><p>Pregunta</p></div>
+                            <div class="col-sm-1 text-center"><p>Vistas</p></div>
+                            <div class="col-sm-2 col-md-1 text-center"><p>Respuestas</p></div>
+                            <div class="clearfix"></div>
+                          </div>
+                
+                          <div class="clearfix"></div>
+                          <div class="panel-group" id="foro" role="tablist" aria-multiselectable="true">
+                              <div class="panel panel-default">
+                                  <div class="panel-heading animated" role="tab" id="foro-1">
+                                    <h4 class="panel-title">
+                                      <a role="button" data-toggle="collapse" data-parent="#tecnica1" href="#tecnica1" aria-expanded="false" aria-controls="tecnica1">
+                                          <div class="col-xs-12 visible-xs foro__titulo"><p>¿Puedo liquidar en dólares?</p></div>
+
+                                          <div class="col-xs-3 col-sm-2 col-md-1 foro__fechahora"><p>20.09.16 <br class="visible-sm visible-xs"> <span> 12:45</span></p></div>
+                                          <div class="col-xs-7 col-sm-3 col-md-2 col-lg-2 foro__alumno"><img src="img/user-default-xs.png" alt="User" class="img-responsive"><p>Juan Alberto</p></div>
+                                          <!-- estado visible en mobile -->
+                                          <div class="hidden-xs col-xs-10 col-sm-4 col-md-7 col-lg-7 foro__titulo"><p>¿Puedo liquidar en dólares?</p></div>
+                                          <div class="col-xs-2 visible-xs foro__comentario text-right">
+                                            <p><i class="icn icn-20"></i> 2</p><!--vistas -->
+                                            <p><i class="icn icn-21"></i> 2</p><!--respuestas   -->
+                                          </div>    <!-- Estilos para mobile de las notificaciones de "vistas y respuestas" -->
+                                          <div class="hidden-xs col-xs-2 col-sm-1 foro__comentario text-center">
+                                            <p>2</p>
+                                          </div>
+                                          <div class="hidden-xs col-sm-2 col-md-1 hidden-xs foro__estado text-center">
+                                            <p class="color-1">2</p>
+                                          </div>
+                                          <!-- estado visible en el resto de los dispositivos -->
+                                          <span class="clearfix"> </span>
+                                      </a>
+                                    </h4>
+                                  </div>
+                                  <div id="tecnica1" class="panel-collapse collapse animated" role="tabpanel" aria-labelledby="tecnica1">
+                                    <div class="panel-body">
+                                        <div class="row">
+                                            <div class="col-md-2"></div>
+                                            <div class="col-md-1"></div>
+                                            <div class="col-md-9 comentario">
+                                            @@include('comments4.html')
+                                            <div class="clearfix"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                  </div>
+                              </div> <!-- Panel -->
+                             
+                          </div> <!-- End Panel-group -->
+                          <span> +</span><a href="javascript:;" class="btn-sm btn-link">CARGAR LAS SIGUIENTES CONSULTAS</a>
+                        
+                      </div>
+                    </div>
+
+                  </div>                  
+              </div>
+             
+        </div>
+      </div>    
+    </section>
+@@include('footer.html')
+
+<script>
+      function textCounter(field,field2,maxlimit) {
+        var fieldId = field.getAttribute('id');
+         var countfield = document.getElementById(fieldId).nextElementSibling;
+         if ( field.value.length > maxlimit ) {
+          field.value = field.value.substring( 0, maxlimit ) * ' caracteres restantes';
+          return false;
+       } else {
+        countfield.value = maxlimit - field.value.length + ' caracteres restantes';
+       }
+      } 
+</script>
+<script>
+  jQuery(document).ready(function() {
+    App.comment();
+  });
+</script>

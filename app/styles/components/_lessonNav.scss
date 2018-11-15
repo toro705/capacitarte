@@ -1,0 +1,121 @@
+.lesson__nav {
+    .lesson__nav__controller {
+        line-height: 48px;
+        div {
+            display: inline-block;
+            float: none;
+            line-height: initial;
+            vertical-align: middle;
+            &.arrow {
+                width: 28px;
+                height: 50px;
+                background-position: -245px -3px; 
+            }
+            &.lesson__nav__controller__text {
+                margin-left: 15px;
+                @include mq('tablet') {
+                    margin-left: 7px;
+                }
+            }
+            p {
+                margin-bottom: 0;
+                @extend .color-5;
+                font-weight: 800;
+                &:first-of-type {
+                    @extend .paragraph-2;
+                    text-transform: uppercase;
+                    margin-bottom: 5px;
+                    @include mq ('tablet') {
+                        font-size: 10px;
+                        line-height: 12px;
+                    }
+                }
+                &:last-of-type {
+                    @extend .paragraph-1;
+                    font-weight: 700;
+                    span {
+                        @extend .color-4;
+                        font-weight: 500;
+                        margin-right: 11px;
+                        @include mq('tablet') {
+                            margin-right: 7px;
+                        }
+
+                    }
+                    @include mq ('tablet') {
+                        font-size: 12px;
+                        line-height: 14px;
+                    }
+
+                }
+            }
+        }
+        &.prev {
+            float: left;
+        }
+        &.next {
+            float: right;
+            .lesson__nav__controller__text {
+                text-align: right;
+                margin-left: 0;
+                margin-right: 15px;
+                @include mq('tablet') {
+                    margin-right: 7px;
+                }
+
+            }
+            .arrow {
+                float: right;
+                background-position: -275px -3px; 
+
+            }
+        }
+        @include on-event {
+            div {
+                &.lesson__nav__controller__text {
+                    margin-left: 10px;
+                    @include mq('tablet') {
+                        margin-left: 4px;
+                    }
+
+                }
+
+                p{
+                    &:first-of-type{
+                        @include mq('mobile') {
+                            color: $color-1;
+                        }
+                    }
+                    &:last-of-type {
+                        @extend .color-1;
+                        span{
+                            margin-right: 7px;
+                            @include mq('tablet') {
+                                margin-right: 4px;
+                            }
+
+                        }
+                    }
+                }
+                &.arrow {
+                    background-position: -245px -56px; 
+                }
+            }
+            &.next {
+                div {
+                    &.lesson__nav__controller__text {
+                        margin-right: 10px;
+                        @include mq('tablet') {
+                            margin-right: 4px;
+                        }
+
+                    }
+                    &.arrow {
+                        background-position: -275px -56px;
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+    }
+}

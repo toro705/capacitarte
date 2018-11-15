@@ -1,0 +1,148 @@
+.loginsect__head {
+	@extend .bg-12, .text-center;
+	visibility: hidden;
+	vertical-align: middle;
+	line-height: 100px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	display: block;
+	z-index: 2;
+	@include mq('mobile') {
+		line-height: 25px;
+		padding: 8px 0;
+	}
+
+	a{
+		p{
+			@extend .color-2;
+			font-weight: 600;
+			display: inline-block;
+			margin: 0 0 0 5px;
+			letter-spacing: 2px;
+
+		}
+	}
+}
+#loginsect{
+	overflow: hidden;
+	background-image: url("../img/login.jpg");
+	background-size: cover;
+	background-position: top center;
+	margin-top: 100px; 
+	padding-top: 0;
+	@include mq('mobile') {
+		margin-top: 87px; 
+	}
+	.container-fluid {
+		padding: 0;
+		.loginsect__container {
+			min-height: calc(100vh - 100px);
+			height: auto;
+			line-height: calc(100vh - 100px);
+			@include mq('mobile') {
+				min-height: calc(100vh - 102px);
+				height: auto;
+				line-height: 50px;
+				margin-top: 102px;
+				padding-bottom:	15px;
+			}
+			 .visible-xs {
+			 	width: 100%;
+			 	margin-top: 15px;
+			 	a{
+					padding: 0 10px;
+
+			 	}
+			 }
+			.left__content {
+				visibility:hidden;
+				display: inline-block;
+				width: 100%;
+				position: relative;
+				background: rgba(255, 255, 255, 0.47);
+				height: auto;
+				line-height: initial;
+				vertical-align: middle;
+				padding: 40px 52px 35px;
+				-webkit-box-shadow: 1px 1px 2px 2px rgba(128, 128, 128, 0.25);
+				box-shadow: 1px 1px 2px 2px rgba(128, 128, 128, 0.25);
+				 @include mq('tablet') {
+						padding:30px 30px 25px;
+				 }
+				.form-control {
+					display: inline-block;
+					height: auto;
+					line-height: 60px;
+					font-size: 20px;
+				    color: #666;
+				    padding: 0 25px;
+					background-color: #FFF;
+					border: 1px solid #FFF;
+					border-radius: 3px;
+				    margin-bottom: 20px;	
+					cursor: pointer;
+					box-shadow: none;
+					&:focus {
+					    box-shadow: none;
+					}
+
+				}
+				button {
+					margin-bottom: 32px;
+					@include mq('tablet')  {
+						padding: 0 74px;
+					}
+					@include mq('mobile') {
+						width: 100%;
+						padding: 0 10px;
+						display: block;
+
+					}
+
+				}
+				h3 {
+					margin: 0 0 30px;
+				}
+				 &#rec-pass {
+				 	button {
+				 		padding: 0 45px;
+							@include mq('tablet')  {
+								padding: 0 10px;
+							}
+
+				 	}
+				 }
+				 &#rec-pass-new {
+				 	button {
+				 		padding: 0 125px;
+							@include mq('desktop-md')  {
+								padding: 0 100px;
+							}
+							@include mq('tablet')  {
+								padding: 0 91px;
+							}
+
+				 	}
+				 }
+			}
+			.right__content {
+				visibility:hidden;
+				display: inline-block;
+				width: 100%;
+				height: auto;
+				line-height: initial;
+				vertical-align: middle;
+				p {
+					line-height: 55px;
+					font-size: 40px;
+					margin-bottom: 0;
+				}
+				h1 {
+					margin-bottom: 25px;	
+				}
+			}
+		}
+	}
+}

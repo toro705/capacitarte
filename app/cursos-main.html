@@ -1,0 +1,156 @@
+ <!doctype html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>capacitarse</title>
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="/bower_components/animate.css/animate.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+    
+    <!-- build:js scripts/vendor/modernizr.js -->
+    <script src="/bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+  </head>
+  <body id="body">
+    <!--[if IE]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+         
+ <nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle navCollapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Mis Cursos</a>
+    </div>
+
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+<nav class="main-nav">
+      <div class="nav navbar-nav">
+        <div class="nanavbar-user">
+          <div class="navbar-user__img"><img src="img/user-default.png" alt="User Img" class="img-responsive"></div>
+          <div class="navbar-user__data">
+            <p class="h4">Daiana Arriola Gonsalez</p>
+            <a href="javascript:;" class="btn btn-sm btn-link">Editar Perfil</a>
+          </div>
+          <button type="button" class="navCollapse">
+            <span class="icn icn-2"></span>
+          </button>                  
+        </div>
+        <ul class="navbar-principal list-unstyled">
+            <li><a href="javascript:;">Mis cursos</a></li>
+            <li><a href="javascript:;">Mis consultas</a></li>
+            <li><a href="javascript:;">Mis Certificados</a></li>
+            <li><a href="javascript:;">Más cursos disponibles</a></li>
+            <li><a href="javascript:;"><span class="icn icn-1"></span> Salir</a></li>
+        </ul>
+      </div>
+      <a href="javascript:;" class="ayuda"><span>?</span>Ayuda</a>
+</nav>
+<div class="nav-overlay navCollapse"></div>     
+
+    <section id="cursos-main">
+      <div class="container-fluid">
+        <div class="cursos-main__cursos">
+                    <div class="preloader-container animated fadeIn">
+              <div class="preloader c100 p90 big center animated spin infinite">
+                  <div class="slice"><div class="bar"></div><div class="fill"></div></div>
+              </div>
+          </div>  
+          <ul class="list-inline list-unstyled">
+          	<li><a href="javascript:;">Todos</a></li>
+          	<li><a href="javascript:;">En curso</a></li>
+          	<li><a href="javascript:;">Finalizados</a></li>
+          </ul>
+                            <div class="col-sm-4">
+                    <div class="course-block inProgress">
+                        <div class="course-img" style="background-image: url('img/courseimg.jpg');">
+                            <i class="fa fa-envelop fa-3x" style="line-height:27px; margin-left:-12px;"></i>
+                        </div>
+                        <div class="course-content">
+                            <h4>Cursos de Impuesos: Bienes personales</h4>
+                            <p>Aprendé lo mas importante sobre bienes personales en este curso online</p>
+                        </div>
+                        <a href="javascript:;" class="course-state">
+                          <div class="c100 p25 small"><!-- la clase p indica el porcentaje del total alcanzado -->
+                            <span>25</span>
+                            <div class="slice">
+                              <div class="bar"></div>
+                              <div class="fill"></div>
+                            </div>
+                          </div>
+                          <p>CONTINUAR CURSO</p>
+                          <div class="clearfix"></div>
+                        </a href="javascript:;">
+                        <div class="clearfix"></div>
+                    </div>
+                  </div>
+  
+             
+
+        </div>
+      </div>    
+    </section>
+    <script>
+    	$(document).ready(function(){
+    		App.infiniteScroll();
+    	});
+    </script>
+   
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='https://www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create','UA-XXXXX-X');ga('send','pageview');
+    </script>
+
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/modernizr/modernizr.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+    
+    <!-- build:js scripts/plugins.js -->
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/affix.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/alert.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tooltip.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/modal.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/transition.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/button.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/popover.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/carousel.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js"></script>
+    <script src="/bower_components/wow/dist/wow.min.js"></script>
+    <!-- endbuild -->
+    
+    <!-- build:js scripts/main.js -->
+    <script src="scripts/app.js"></script>
+    <!-- endbuild -->
+  </body>
+</html>
